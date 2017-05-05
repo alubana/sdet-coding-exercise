@@ -18,6 +18,7 @@ Note: The application contains intentional bugs
 1. Make sure you have [NPM](https://www.npmjs.com/) and [Node.js](http://nodejs.org/). Please note npm in distributed with Node.js.
 2. Clone [todo-app](https://github.com/todo-app-link-please-update) and issue ``npm start`` in app root folder. todo-app will run on [Local Host](http://localhost/4200)
 3. Please note you can only make changes to ``app.listen(PORT, IP)`` method in `./app.js.` As your automation scripts will be run against the default todo-app.
+
 Note: In case of problems with deployment, please contact app [Admin](admin@some-domain-maybe-tek.com)
 
 ## Download Java Project Repo
