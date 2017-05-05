@@ -41,7 +41,7 @@ Commit your code to the [repository](https://github.com/coding-ex).
 
 ## **Problem Statement**
 * Using the provided todo-app, create a [Selenium](http://www.seleniumhq.org/) framework. And implement integration (e2e) tests to verify the functionality of the todo-app.
-* You must either use TestNG or Junit as the unit test framework.
+* You must either use TestNG or JUnit as the unit test framework.
 * Using an Api Test framework of your choice (such as [REST-assured](http://rest-assured.io/), [Jersey](https://jersey.java.net/)), test all routes (end-points) implemented in `app.js`.
 
 #### Documentation
