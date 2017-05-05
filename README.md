@@ -7,6 +7,7 @@ A simple [mongo](https://www.mongodb.com/)-[express](https://expressjs.com/) nod
 * User must be logged in to add, mark-complete or delete a todo. Otherwise, if the user perform any of these actions, the user must be redirected to the login page.
 * Succesfull login redirects the user to landing page. Otherwise, the user stays on the login page.
 * Data persistence
+
 Note: The application contains intentional bugs
 
 ## General Instruction
