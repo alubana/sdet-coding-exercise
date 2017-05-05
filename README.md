@@ -1,7 +1,7 @@
 # TEKsystems SDET Coding Exercise for Java
 
 ## Application Description
-A simple mongo-express node based todo-app. App provided basic functionality for a user to store, mark-complete, delete a todo. All requests are handled via a RESTful Api. App also, features a local authentication strategy using [Passport](http://passportjs.org/).
+A simple [mongo](https://www.mongodb.com/)-[express](https://expressjs.com/) node based todo-app. App provided basic functionality for a user to store, mark-complete, delete a todo. All requests are handled via a RESTful Api. App also, features a local authentication strategy using [Passport](http://passportjs.org/).
 ### Features at a glance 
 * todo-app must display all saved todos regardless of login authentication
 * User must be logged in to add, mark-complete or delete a todo. Otherwise, if the user perform any of these actions, the user must be redirected to the login page.
