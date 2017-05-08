@@ -4,7 +4,7 @@
   "description": "App provides basic functionality to store and mark to do items using MEN stack.",
   "main": "app.js",
   "scripts": {
-    "start" : "node app.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -17,6 +17,10 @@
     "express-session": "^1.15.2",
     "mongodb": "^2.2.25",
     "mongoose": "3.8",
-    "request": "^2.81.0"
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.0.0",
+    "request": "^2.81.0",
+    "tungus": "0.0.5"
   }
 }

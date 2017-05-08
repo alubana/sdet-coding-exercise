@@ -13,12 +13,14 @@ var Todo = require("./models/todo");
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/assets'));
+app.use(express.static(__dirname + '/data'));
+
 app.use(bodyParser.urlencoded({
     extended: false
 }));
 app.use(bodyParser.json());
 
-app.listen(process.env.PORT, process.env.IP, function() {
+app.listen('3600', 'localhost', function() {
     console.log("ToDo App server has started");
 });
 
