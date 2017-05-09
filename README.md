@@ -44,7 +44,4 @@ Commit your code to the [repository](https://github.com/coding-ex).
 * You must either use TestNG or JUnit as the unit test framework.
 * Using an Api Test framework of your choice (such as [REST-assured](http://rest-assured.io/), [Jersey](https://jersey.java.net/)), test all routes (end-points) implemented in `app.js`.
 
-#### Documentation
-Add a `README.md` file (You may replace the current file with your own).
-
 _You may demonstrate any other relevant technologies or approaches deemed fit within the scope of this exercise._
