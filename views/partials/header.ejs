@@ -3,12 +3,12 @@
 
 <head>
     <title>todo-app</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">-->
     <link rel="stylesheet" type="text/css" href="/css/todo.css">
     <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
     <script type="text/javascript" src="/js/lib/jquery-3.2.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -23,11 +23,8 @@
                     <% if(!currentUser) { %>
                         <li><a href="/login">Login</a>
                         </li>
-                        <% } else if(currentUser.username==='admin' ) { %>
-                        <li><a href="/register">Registeration</a>
-                        </li>
-                        <li><a href="/logout">Logout: <%= currentUser.username %></a>
-                        </li>
+                         <li><a href="/register">Registeration</a>
+                         </li>
                         <% } else { %>
                         <li><a href="/logout">Logout: <%= currentUser.username %></a>
                         </li>

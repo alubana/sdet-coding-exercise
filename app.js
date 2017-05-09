@@ -6,6 +6,7 @@ var tungus = require('tungus');
 var mongoose = require("mongoose");
 var passport = require("passport");
 var LocalStrategy = require("passport-local");
+var os = require("os");
 
 //db collections
 var User = require("./models/user");
@@ -14,53 +15,32 @@ var Todo = require("./models/todo");
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/assets'));
 app.use(express.static(__dirname + '/data'));
-
 app.use(bodyParser.urlencoded({
     extended: false
 }));
 app.use(bodyParser.json());
 
-app.listen('3600', 'localhost', function() {
-    console.log("ToDo App server has started");
+app.listen(3600, 'localhost', function() {
+    console.log("todo-app server has started");
 });
 
-//DB Stuff
-//mongoose.connect("mongodb://sdet:teksystems@ds117821.mlab.com:17821/todo");
+ function getDirName() {
+	 if(os.platform() == 'win32') {
+		 return __dirname.substr(3, __dirname.length);
+	 }
+	 return __dirname;
+ }
 
+//DB Stuff
 /**
  * Connect to the console database on localhost with
  * the default port (27017)
  */
-mongoose.connect('tingodb:///data/', function(err) {
+mongoose.connect('tingodb:///'  + getDirName() + '/data', function (err) {
     if (err) throw err;
-
     console.log("db connected");
-    if (!User.find({
-            username: 'admin'
-        })) {
-        console.log("Creating Admin...");
-        createAdminOnly();
-    }
-    else {
-        console.log("Admin already exists");
-    }
+	console.log("dir:" + __dirname);
 });
-
-
-function createAdminOnly() {
-    var newUser = new User({
-        username: 'admin',
-    });
-
-    User.register(newUser, {
-        password: 'admin'
-    }, function(err, user) {
-        if (err) {
-            console.log("Error Creating admin: Please contact the developer");
-            console.log(err);
-        }
-    });
-}
 
 //Passport Config
 app.use(require("express-session")({
@@ -141,7 +121,7 @@ app.post("/api/todo", isLoggedIn, function(req, res) {
     res.redirect("/");
 });
 
-app.delete("/api/todo/:todo_id", function(req, res) {
+app.delete("/api/todo/:todo_id", isLoggedIn, function(req, res) {
     console.log("Delete request recevied");
     console.log("Req param : " + req.params.todo_id);
     Todo.remove({
@@ -157,7 +137,6 @@ app.delete("/api/todo/:todo_id", function(req, res) {
             });
         }
     });
-
 });
 
 app.put("/api/todo/:todo_id", isLoggedIn, function(req, res) {
@@ -183,9 +162,7 @@ app.put("/api/todo/:todo_id", isLoggedIn, function(req, res) {
     });
 });
 
-
 //AUTH ROUTES
-
 app.get("/login", function(req, res) {
     res.render("login", {
         currentUser: req.user
@@ -224,14 +201,13 @@ function isLoggedInAsAdmin(req, res, next) {
 }
 
 //Registeration Routes
-
-app.get("/register", isLoggedInAsAdmin, function(req, res) {
+app.get("/register",  function(req, res) {
     res.render("register", {
         currentUser: req.user
     });
 });
 
-app.post("/register", isLoggedInAsAdmin, function(req, res) {
+app.post("/register", function(req, res) {
     var newUser = new User({
         username: req.body.username
     });
@@ -244,12 +220,11 @@ app.post("/register", isLoggedInAsAdmin, function(req, res) {
                 errDesc: err.message,
                 currentUser: req.user
             });
+            return;
         }
-
         passport.authenticate("local")(req, res, function() {
             console.log(req);
             res.redirect("/");
         })
     });
-
 });
