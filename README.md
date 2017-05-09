@@ -25,12 +25,12 @@ Note: In case of problems with deployment, please contact app [Admin](alubana@te
 * Clone [TEKsystem-Coding-Ex](https://github.com/coding-ex).
 * Follow instructions explicitly specified in respective `package.info`.
 
-## Evaluation Factors (In order of importance)
+## Evaluation Factors
 * Demonstrate OOP principles
 * Framework and test case organization
 * Automation script stability
 * Code Coverage
-* Use of a build tool such as [maven](https://maven.apache.org/)
+* Effective usage of a build tool such as [maven](https://maven.apache.org/)
 
 ## Delivery Instruction
 * The code must work out of the box, i.e. include all the necessary dependencies.
@@ -42,6 +42,7 @@ Commit your code to the [repository](https://github.com/coding-ex).
 ## **Problem Statement**
 * Using the provided todo-app, create a [Selenium](http://www.seleniumhq.org/) framework. And implement integration (e2e) tests to verify the functionality of the todo-app.
 * You must either use TestNG or JUnit as the unit test framework.
+* Using a BDD framework such as [Cucumber](https://cucumber.io/) is recommended.
 * Using an Api Test framework of your choice (such as [REST-assured](http://rest-assured.io/), [Jersey](https://jersey.java.net/)), test all routes (end-points) implemented in `app.js`.
 
 _You may demonstrate any other relevant technologies or approaches deemed fit within the scope of this exercise._
