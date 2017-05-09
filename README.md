@@ -5,7 +5,7 @@ A simple [mongo](https://www.mongodb.com/)-[express](https://expressjs.com/) nod
 
 ## App Deployment | Running Locally
 1. Make sure you have [NPM](https://www.npmjs.com/) and [Node.js](http://nodejs.org/). Please note npm in distributed with Node.js.
-2. Clone [todo-app](https://github.com/todo-app-link-please-update) and issue ``npm install`` followed by ``npm start`` in app root folder. todo-app will run on [Local Host](http://localhost/3600) port 3600. Default user is admin with password admin
+2. Clone [todo-app](https://github.com/todo-app-link-please-update) and issue ``npm install`` followed by ``npm start`` in app root folder. todo-app will run on [Local Host](http://localhost:3600) port 3600. Default user is admin with password admin
 3. Please note you can only make changes to ``app.listen(PORT, IP)`` method in `./app.js.` As your automation scripts will be run against the default todo-app.
 
 Note: In case of problems with deployment, please contact app [Admin](alubana@teksystems.com)
