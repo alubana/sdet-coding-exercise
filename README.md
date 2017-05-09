@@ -2,7 +2,14 @@
 
 ## Application Description
 A simple [mongo](https://www.mongodb.com/)-[express](https://expressjs.com/) node based todo-app. App provided basic functionality for a user to store, mark-complete, delete a todo. All requests are handled via a RESTful Api. App features a local authentication strategy using [Passport](http://passportjs.org/).
-### Features at a glance 
+
+## App Deployment | Running Locally
+1. Make sure you have [NPM](https://www.npmjs.com/) and [Node.js](http://nodejs.org/). Please note npm in distributed with Node.js.
+2. Clone [todo-app](https://github.com/todo-app-link-please-update) and issue ``npm install`` followed by ``npm start`` in app root folder. todo-app will run on [Local Host](http://localhost/3600) port 3600. Default user is admin with password admin
+3. Please note you can only make changes to ``app.listen(PORT, IP)`` method in `./app.js.` As your automation scripts will be run against the default todo-app.
+
+Note: In case of problems with deployment, please contact app [Admin](alubana@teksystems.com)
+## Features at a glance 
 * todo-app must display all saved todos regardless of login authentication
 * User must be logged in to add, mark-complete or delete a todo. Otherwise, if the user perform any of these actions, the user must be redirected to the login page.
 * Successful login redirects the user to landing page. Otherwise, the user stays on the login page. Also, a new user can be registered.
@@ -13,13 +20,6 @@ Note: The application contains intentional bugs
 ## General Instruction
 * Programming Language must be Java.
 * Exercise must be completed within 24 hours period of receiving examination.
-
-## App Deployment | Running Locally
-1. Make sure you have [NPM](https://www.npmjs.com/) and [Node.js](http://nodejs.org/). Please note npm in distributed with Node.js.
-2. Clone [todo-app](https://github.com/todo-app-link-please-update) and issue ``npm start`` in app root folder. todo-app will run on [Local Host](http://localhost/3600)
-3. Please note you can only make changes to ``app.listen(PORT, IP)`` method in `./app.js.` As your automation scripts will be run against the default todo-app.
-
-Note: In case of problems with deployment, please contact app [Admin](alubana@teksystems.com)
 
 ## Download Java Project Repo
 * Clone [TEKsystem-Coding-Ex](https://github.com/coding-ex).
